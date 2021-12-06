@@ -14,6 +14,7 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('gros-tony', 'assets/gros-tony.png');
         this.load.image('luigi-risotto', 'assets/luigi_risotto.png');
         this.load.image('lenny-carl', 'assets/lenny-carl.png');
+        this.load.image('pathy-selma', 'assets/pathy-selma.png');
     }
 
 /**
@@ -52,6 +53,10 @@ class Tableau1 extends Phaser.Scene {
     this.lenny = this.add.image(300,10,'lenny-carl').setOrigin(0,0);
     this.lenny.setVisible(false)
     this.lenny.scale=0.25
+
+    this.pathy = this.add.image(800,10,'pathy-selma').setOrigin(0,0);
+    this.pathy.setVisible(false)
+    this.pathy.scale=0.25
 
     this.initKeyboard();
 
@@ -131,6 +136,14 @@ class Tableau1 extends Phaser.Scene {
                         me.lenny.setVisible(false)
                     } else {
                         me.lenny.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis J pour Lenny et Carl
+                case Phaser.Input.Keyboard.KeyCodes.J:
+                    if (me.pathy.visible == true) {
+                        me.pathy.setVisible(false)
+                    } else {
+                        me.pathy.setVisible(true)
                     }
                     break;
             }
