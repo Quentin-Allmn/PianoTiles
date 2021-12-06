@@ -13,7 +13,7 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('quimby', 'assets/quimby.png');
         this.load.image('gros-tony', 'assets/gros-tony.png');
         this.load.image('luigi-risotto', 'assets/luigi_risotto.png');
-        this.load.image('luigi-risotto', 'assets/luigi_risotto.png');
+        this.load.image('lenny-carl', 'assets/lenny-carl.png');
     }
 
 /**
@@ -48,6 +48,10 @@ class Tableau1 extends Phaser.Scene {
     this.luigi = this.add.image(500,20,'luigi-risotto').setOrigin(0,0);
     this.luigi.setVisible(false)
     this.luigi.scale=0.5
+
+    this.lenny = this.add.image(300,10,'lenny-carl').setOrigin(0,0);
+    this.lenny.setVisible(false)
+    this.lenny.scale=0.25
 
     this.initKeyboard();
 
@@ -113,12 +117,20 @@ class Tableau1 extends Phaser.Scene {
                         me.luigi.setVisible(true)
                     }
                     break;
-                // initialisation de la touche en appuis S pour Le chef Luigi Risotto
+                // initialisation de la touche en appuis S pour Gros Tony
                 case Phaser.Input.Keyboard.KeyCodes.S:
                     if (me.grostony.visible == true) {
                         me.grostony.setVisible(false)
                     } else {
                         me.grostony.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis H pour Lenny et Carl
+                case Phaser.Input.Keyboard.KeyCodes.H:
+                    if (me.lenny.visible == true) {
+                        me.lenny.setVisible(false)
+                    } else {
+                        me.lenny.setVisible(true)
                     }
                     break;
             }
