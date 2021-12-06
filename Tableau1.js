@@ -20,8 +20,8 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('krusty', 'assets/krusty.png');
         this.load.image('burns', 'assets/burns.png');
         this.load.image('lovejoy', 'assets/Lovejoy.png');
-        this.load.image('krusty', 'assets/krusty.png');
-        this.load.image('krusty', 'assets/krusty.png');
+        this.load.image('barney', 'assets/barney.png');
+        this.load.image('wiggum', 'assets/wiggum.png');
     }
 
 /**
@@ -67,6 +67,18 @@ class Tableau1 extends Phaser.Scene {
 
     this.krusty = this.add.image(800,100,'krusty').setOrigin(0,0);
     this.krusty.setVisible(false)
+
+    this.barney = this.add.image(400,300,'barney').setOrigin(0,0);
+    this.barney.setVisible(false)
+
+    this.burns = this.add.image(870,400,'burns').setOrigin(0,0);
+    this.burns.setVisible(false)
+
+    this.lovejoy = this.add.image(840,500,'lovejoy').setOrigin(0,0);
+    this.lovejoy.setVisible(false)
+
+    this.wiggum = this.add.image(850,200,'wiggum').setOrigin(0,0);
+    this.wiggum.setVisible(false)
 
     this.initKeyboard();
 
@@ -165,6 +177,43 @@ class Tableau1 extends Phaser.Scene {
                         me.krusty.setVisible(true)
                     }
                     break;
+                // initialisation de la touche en appuis C pour Burns et Smithers
+                case Phaser.Input.Keyboard.KeyCodes.C:
+                    if (me.burns.visible == true) {
+                        me.burns.setVisible(false)
+                    }
+                    else {
+                        me.burns.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis X pour Wiggum
+                case Phaser.Input.Keyboard.KeyCodes.X:
+                    if (me.wiggum.visible == true) {
+                        me.wiggum.setVisible(false)
+                    }
+                    else {
+                        me.wiggum.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis F pour le révérant Lovejoy
+                case Phaser.Input.Keyboard.KeyCodes.F:
+                    if (me.lovejoy.visible == true) {
+                        me.lovejoy.setVisible(false)
+                    }
+                    else {
+                        me.lovejoy.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis G pour Barney
+                case Phaser.Input.Keyboard.KeyCodes.G:
+                    if (me.barney.visible == true) {
+                        me.barney.setVisible(false)
+                    }
+                    else {
+                        me.barney.setVisible(true)
+                    }
+                    break;
+
             }
             });
         }
