@@ -10,6 +10,10 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('lisa', 'assets/lisa-simpson.png');
         this.load.image('moe', 'assets/moe.png');
         this.load.image('skinner', 'assets/skinner.png');
+        this.load.image('quimby', 'assets/quimby.png');
+        this.load.image('gros-tony', 'assets/gros-tony.png');
+        this.load.image('luigi-risotto', 'assets/luigi_risotto.png');
+        this.load.image('luigi-risotto', 'assets/luigi_risotto.png');
     }
 
 /**
@@ -35,6 +39,15 @@ class Tableau1 extends Phaser.Scene {
     this.skinner.setVisible(false)
     this.skinner.scale=0.5
 
+    this.quimby = this.add.image(1000,150,'quimby').setOrigin(0,0);
+    this.quimby.setVisible(false)
+
+    this.grostony = this.add.image(800,150,'gros-tony').setOrigin(0,0);
+    this.grostony.setVisible(false)
+
+    this.luigi = this.add.image(500,20,'luigi-risotto').setOrigin(0,0);
+    this.luigi.setVisible(false)
+    this.luigi.scale=0.5
 
     this.initKeyboard();
 
@@ -82,6 +95,30 @@ class Tableau1 extends Phaser.Scene {
                         me.skinner.setVisible(false)
                     } else {
                         me.skinner.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis Q pour Le Maire Quimby
+                case Phaser.Input.Keyboard.KeyCodes.Q:
+                    if (me.quimby.visible == true) {
+                        me.quimby.setVisible(false)
+                    } else {
+                        me.quimby.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis D pour Le chef Luigi Risotto
+                case Phaser.Input.Keyboard.KeyCodes.D:
+                    if (me.luigi.visible == true) {
+                        me.luigi.setVisible(false)
+                    } else {
+                        me.luigi.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis S pour Le chef Luigi Risotto
+                case Phaser.Input.Keyboard.KeyCodes.S:
+                    if (me.grostony.visible == true) {
+                        me.grostony.setVisible(false)
+                    } else {
+                        me.grostony.setVisible(true)
                     }
                     break;
             }
