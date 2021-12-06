@@ -10,11 +10,13 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('lisa', 'assets/lisa-simpson.png');
         this.load.image('moe', 'assets/moe.png');
         this.load.image('skinner', 'assets/skinner.png');
+
         this.load.image('quimby', 'assets/quimby.png');
         this.load.image('gros-tony', 'assets/gros-tony.png');
         this.load.image('luigi-risotto', 'assets/luigi_risotto.png');
         this.load.image('lenny-carl', 'assets/lenny-carl.png');
         this.load.image('pathy-selma', 'assets/pathy-selma.png');
+
         this.load.image('krusty', 'assets/krusty.png');
     }
 
@@ -29,7 +31,7 @@ class Tableau1 extends Phaser.Scene {
     this.lisa.setVisible(false)
     this.lisa.scale=0.5
 
-    this.bart = this.add.image(750,250,'bart').setOrigin(0,0);
+    this.bart = this.add.image(725,250,'bart').setOrigin(0,0);
     this.bart.setVisible(false)
     this.bart.scale=0.5
 
@@ -154,7 +156,8 @@ class Tableau1 extends Phaser.Scene {
                 case Phaser.Input.Keyboard.KeyCodes.B:
                     if (me.krusty.visible == true) {
                         me.krusty.setVisible(false)
-                    } else {
+                    }
+                    else {
                         me.krusty.setVisible(true)
                     }
                     break;
