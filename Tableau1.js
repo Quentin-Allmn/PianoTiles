@@ -90,7 +90,7 @@ class Tableau1 extends Phaser.Scene {
             switch (kevent.keyCode) {
                 // initialisation de la touche en appuis Y pour Homer
                 case Phaser.Input.Keyboard.KeyCodes.Y:
-                    if (me.homer.visible == true) {
+                    if (me.homer.visible === true) {
                         me.homer.setVisible(false)
                     } else {
                         me.homer.setVisible(true)
@@ -98,7 +98,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis O pour Lisa
                 case Phaser.Input.Keyboard.KeyCodes.O:
-                    if (me.lisa.visible == true) {
+                    if (me.lisa.visible === true) {
                         me.lisa.setVisible(false)
                     } else {
                         me.lisa.setVisible(true)
@@ -106,7 +106,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis I pour Bart
                 case Phaser.Input.Keyboard.KeyCodes.I:
-                    if (me.bart.visible == true) {
+                    if (me.bart.visible === true) {
                         me.bart.setVisible(false)
                     } else {
                         me.bart.setVisible(true)
@@ -114,7 +114,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis P pour Moe
                 case Phaser.Input.Keyboard.KeyCodes.P:
-                    if (me.moe.visible == true) {
+                    if (me.moe.visible === true) {
                         me.moe.setVisible(false)
                     } else {
                         me.moe.setVisible(true)
@@ -122,7 +122,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis K pour Skinner
                 case Phaser.Input.Keyboard.KeyCodes.K:
-                    if (me.skinner.visible == true) {
+                    if (me.skinner.visible === true) {
                         me.skinner.setVisible(false)
                     } else {
                         me.skinner.setVisible(true)
@@ -130,7 +130,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis Q pour Le Maire Quimby
                 case Phaser.Input.Keyboard.KeyCodes.Q:
-                    if (me.quimby.visible == true) {
+                    if (me.quimby.visible === true) {
                         me.quimby.setVisible(false)
                     } else {
                         me.quimby.setVisible(true)
@@ -138,7 +138,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis D pour Le chef Luigi Risotto
                 case Phaser.Input.Keyboard.KeyCodes.D:
-                    if (me.luigi.visible == true) {
+                    if (me.luigi.visible === true) {
                         me.luigi.setVisible(false)
                     } else {
                         me.luigi.setVisible(true)
@@ -146,7 +146,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis S pour Gros Tony
                 case Phaser.Input.Keyboard.KeyCodes.S:
-                    if (me.grostony.visible == true) {
+                    if (me.grostony.visible === true) {
                         me.grostony.setVisible(false)
                     } else {
                         me.grostony.setVisible(true)
@@ -154,7 +154,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis H pour Lenny et Carl
                 case Phaser.Input.Keyboard.KeyCodes.H:
-                    if (me.lenny.visible == true) {
+                    if (me.lenny.visible === true) {
                         me.lenny.setVisible(false)
                     } else {
                         me.lenny.setVisible(true)
@@ -162,7 +162,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis J pour Pathy et Selma
                 case Phaser.Input.Keyboard.KeyCodes.J:
-                    if (me.pathy.visible == true) {
+                    if (me.pathy.visible === true) {
                         me.pathy.setVisible(false)
                     } else {
                         me.pathy.setVisible(true)
@@ -170,7 +170,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis B pour Krusty
                 case Phaser.Input.Keyboard.KeyCodes.B:
-                    if (me.krusty.visible == true) {
+                    if (me.krusty.visible === true) {
                         me.krusty.setVisible(false)
                     }
                     else {
@@ -179,7 +179,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis C pour Burns et Smithers
                 case Phaser.Input.Keyboard.KeyCodes.C:
-                    if (me.burns.visible == true) {
+                    if (me.burns.visible === true) {
                         me.burns.setVisible(false)
                     }
                     else {
@@ -188,7 +188,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis X pour Wiggum
                 case Phaser.Input.Keyboard.KeyCodes.X:
-                    if (me.wiggum.visible == true) {
+                    if (me.wiggum.visible === true) {
                         me.wiggum.setVisible(false)
                     }
                     else {
@@ -197,7 +197,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis F pour le révérant Lovejoy
                 case Phaser.Input.Keyboard.KeyCodes.F:
-                    if (me.lovejoy.visible == true) {
+                    if (me.lovejoy.visible === true) {
                         me.lovejoy.setVisible(false)
                     }
                     else {
@@ -206,7 +206,7 @@ class Tableau1 extends Phaser.Scene {
                     break;
                 // initialisation de la touche en appuis G pour Barney
                 case Phaser.Input.Keyboard.KeyCodes.G:
-                    if (me.barney.visible == true) {
+                    if (me.barney.visible === true) {
                         me.barney.setVisible(false)
                     }
                     else {
