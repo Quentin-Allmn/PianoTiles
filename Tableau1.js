@@ -29,8 +29,16 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('martin', 'assets/martin.png');
         this.load.image('marge', 'assets/marge.png');
 
+        this.load.image('eglise', 'assets/eglise.png');
+        this.load.image('bd', 'assets/bd.png');
+        this.load.image('taverne', 'assets/taverne.png');
+        this.load.image('ned', 'assets/ned.png');
+
         for (let h = 1; h <= 3; h++) {
             this.load.image('donut' + h, 'assets/animation/donut-' + h + '.png');
+        }
+        for (let h = 1; h <= 4; h++) {
+            this.load.image('duff' + h, 'assets/animation2/duff-' + h + '.png');
         }
     }
 
@@ -106,6 +114,10 @@ class Tableau1 extends Phaser.Scene {
     this.marge.setVisible(false)
     this.marge.scale=0.5
 
+    this.ned = this.add.image(50,10,'ned').setOrigin(0,0);
+    this.ned.setVisible(false)
+    this.ned.scale=0.5
+
     this.donut = this.add.sprite(0, 350, 'donut').setOrigin(0,0);
     console.log(frames)
     this.anims.create({
@@ -127,6 +139,29 @@ class Tableau1 extends Phaser.Scene {
     });
     this.donut.scale=0.2
     this.donut.setVisible(false)
+
+
+    this.duff = this.add.sprite(0, 10, 'duff').setOrigin(0,0);
+    console.log(frames)
+    this.anims.create({
+        key: 'duff',
+        frames: this.getFrames("duff",4),
+        frameRate: 16,
+        repeat: -1
+    });
+    this.duff.play('duff')
+    this.tweens.add({
+        targets: this.duff,
+        x: 900,
+        duration: 3000,
+        ease: 'Linear',
+        yoyo: true,
+        flipX: true,
+        repeat: -1,
+    });
+    this.duff.scale=0.2
+    this.duff.setVisible(false)
+
 
     this.initKeyboard();
 
@@ -313,6 +348,15 @@ class Tableau1 extends Phaser.Scene {
                     }
                     else {
                         me.donut.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis SPACE pour l'animation du duff
+                case Phaser.Input.Keyboard.KeyCodes.SPACE:
+                    if (me.duff.visible === true) {
+                        me.duff.setVisible(false)
+                    }
+                    else {
+                        me.duff.setVisible(true)
                     }
                     break;
             }
