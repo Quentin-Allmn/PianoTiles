@@ -28,6 +28,9 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('nelson', 'assets/nelson.png');
         this.load.image('martin', 'assets/martin.png');
         this.load.image('marge', 'assets/marge.png');
+
+        for(let h=1;h<=3;h++){
+            this.load.image('donut'+h, 'assets/donut-'+h+'.png');
     }
 
 /**
@@ -98,8 +101,9 @@ class Tableau1 extends Phaser.Scene {
     this.martin = this.add.image(850,200,'martin').setOrigin(0,0);
     this.martin.setVisible(false)
 
-    this.marge = this.add.image(850,200,'marge').setOrigin(0,0);
+    this.marge = this.add.image(50,100,'marge').setOrigin(0,0);
     this.marge.setVisible(false)
+    this.marge.scale=0.5
 
     this.initKeyboard();
 
@@ -280,6 +284,7 @@ class Tableau1 extends Phaser.Scene {
                     }
                     break;
             }
-            });rt
+            });
         }
+
 }
