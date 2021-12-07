@@ -30,7 +30,7 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('marge', 'assets/marge.png');
 
         for (let h = 1; h <= 3; h++) {
-            this.load.image('donut' + h, 'assets/donut-' + h + '.png');
+            this.load.image('donut' + h, 'assets/animation/donut-' + h + '.png');
         }
     }
 
@@ -105,6 +105,28 @@ class Tableau1 extends Phaser.Scene {
     this.marge = this.add.image(50,100,'marge').setOrigin(0,0);
     this.marge.setVisible(false)
     this.marge.scale=0.5
+
+    this.donut = this.add.sprite(0, 350, 'donut').setOrigin(0,0);
+    console.log(frames)
+    this.anims.create({
+        key: 'donut',
+        frames: this.getFrames("donut",3),
+        frameRate: 16,
+        repeat: -1
+    });
+    this.donut.play('donut')
+
+    this.tweens.add({
+        targets: this.donut,
+        x: 900,
+        duration: 3000,
+        ease: 'Linear',
+        yoyo: true,
+        flipX: true,
+        repeat: -1,
+    });
+    this.donut.scale=0.2
+    this.donut.setVisible(false)
 
     this.initKeyboard();
 
@@ -284,8 +306,23 @@ class Tableau1 extends Phaser.Scene {
                         me.marge.setVisible(true)
                     }
                     break;
+                // initialisation de la touche en appuis N pour l'animation du donut
+                case Phaser.Input.Keyboard.KeyCodes.N:
+                    if (me.donut.visible === true) {
+                        me.donut.setVisible(false)
+                    }
+                    else {
+                        me.donut.setVisible(true)
+                    }
+                    break;
             }
             });
         }
-
+    getFrames(prefix,length) {
+        let frames = [];
+        for (let i = 1; i <= length; i++) {
+            frames.push({key: prefix + i});
+        }
+        return frames;
+    }
 }
