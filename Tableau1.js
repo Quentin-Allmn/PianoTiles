@@ -4,7 +4,7 @@ class Tableau1 extends Phaser.Scene {
     /**
      * précharge des assets
      */
-    preload(){
+    preload() {
         this.load.image('homer', 'assets/homer-simpson.png');
         this.load.image('bart', 'assets/bart-simpson.png');
         this.load.image('lisa', 'assets/lisa-simpson.png');
@@ -29,8 +29,9 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('martin', 'assets/martin.png');
         this.load.image('marge', 'assets/marge.png');
 
-        for(let h=1;h<=3;h++){
-            this.load.image('donut'+h, 'assets/donut-'+h+'.png');
+        for (let h = 1; h <= 3; h++) {
+            this.load.image('donut' + h, 'assets/donut-' + h + '.png');
+        }
     }
 
 /**
