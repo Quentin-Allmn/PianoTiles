@@ -22,6 +22,12 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('lovejoy', 'assets/Lovejoy.png');
         this.load.image('barney', 'assets/barney.png');
         this.load.image('wiggum', 'assets/wiggum.png');
+
+        this.load.image('dr-hibbert', 'assets/dr-hibbert.png');
+        this.load.image('edna', 'assets/edna.png');
+        this.load.image('nelson', 'assets/nelson.png');
+        this.load.image('martin', 'assets/martin.png');
+        this.load.image('marge', 'assets/marge.png');
     }
 
 /**
@@ -79,6 +85,21 @@ class Tableau1 extends Phaser.Scene {
 
     this.wiggum = this.add.image(850,200,'wiggum').setOrigin(0,0);
     this.wiggum.setVisible(false)
+
+    this.nelson = this.add.image(850,200,'nelson').setOrigin(0,0);
+    this.nelson.setVisible(false)
+
+    this.edna = this.add.image(850,200,'edna').setOrigin(0,0);
+    this.edna.setVisible(false)
+
+    this.hibbert = this.add.image(850,200,'dr-hibbert').setOrigin(0,0);
+    this.hibbert.setVisible(false)
+
+    this.martin = this.add.image(850,200,'martin').setOrigin(0,0);
+    this.martin.setVisible(false)
+
+    this.marge = this.add.image(850,200,'marge').setOrigin(0,0);
+    this.marge.setVisible(false)
 
     this.initKeyboard();
 
@@ -213,8 +234,52 @@ class Tableau1 extends Phaser.Scene {
                         me.barney.setVisible(true)
                     }
                     break;
-
+                // initialisation de la touche en appuis V pour Dr Hibbert
+                case Phaser.Input.Keyboard.KeyCodes.V:
+                    if (me.hibbert.visible === true) {
+                        me.hibbert.setVisible(false)
+                    }
+                    else {
+                        me.hibbert.setVisible(true)
+                    }
+                    break;
+                    // initialisation de la touche en appuis W pour Edna Krapabelle
+                case Phaser.Input.Keyboard.KeyCodes.W:
+                    if (me.edna.visible === true) {
+                        me.edna.setVisible(false)
+                    }
+                    else {
+                        me.edna.setVisible(true)
+                    }
+                    break;
+                    // initialisation de la touche en appuis M pour Nelson
+                case Phaser.Input.Keyboard.KeyCodes.M:
+                    if (me.nelson.visible === true) {
+                        me.nelson.setVisible(false)
+                    }
+                    else {
+                        me.nelson.setVisible(true)
+                    }
+                    break;
+                    // initialisation de la touche en appuis L pour Martin
+                case Phaser.Input.Keyboard.KeyCodes.L:
+                    if (me.martin.visible === true) {
+                        me.martin.setVisible(false)
+                    }
+                    else {
+                        me.martin.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis U pour Marge et Maggie
+                case Phaser.Input.Keyboard.KeyCodes.U:
+                    if (me.marge.visible === true) {
+                        me.marge.setVisible(false)
+                    }
+                    else {
+                        me.marge.setVisible(true)
+                    }
+                    break;
             }
-            });
+            });rt
         }
 }
