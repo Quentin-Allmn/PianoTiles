@@ -34,7 +34,7 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('taverne', 'assets/taverne.png');
         this.load.image('ned', 'assets/ned.png');
 
-        for (let h = 1; h <= 3; h++) {
+        for (let h = 1; h <= 4; h++) {
             this.load.image('donut' + h, 'assets/animation/donut-' + h + '.png');
         }
         for (let h = 1; h <= 4; h++) {
@@ -122,7 +122,7 @@ class Tableau1 extends Phaser.Scene {
     console.log(frames)
     this.anims.create({
         key: 'donut',
-        frames: this.getFrames("donut",3),
+        frames: this.getFrames("donut",4),
         frameRate: 16,
         repeat: -1
     });
@@ -350,7 +350,7 @@ class Tableau1 extends Phaser.Scene {
                         me.donut.setVisible(true)
                     }
                     break;
-                // initialisation de la touche en appuis SPACE pour l'animation du duff
+                // initialisation de la touche en appuis SPACE pour l'animation de la duff
                 case Phaser.Input.Keyboard.KeyCodes.SPACE:
                     if (me.duff.visible === true) {
                         me.duff.setVisible(false)
