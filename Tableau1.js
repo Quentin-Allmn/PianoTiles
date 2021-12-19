@@ -140,12 +140,12 @@ class Tableau1 extends Phaser.Scene {
     this.ned.scale=0.5
 
     //Animation du Donut
-    this.donut = this.add.sprite(0, 350, 'donut').setOrigin(0,0);
+    this.donut = this.add.sprite(0, 500, 'donut').setOrigin(0,0);
     console.log(frames)
     this.anims.create({
         key: 'donut',
         frames: this.getFrames("donut",4),
-        frameRate: 16,
+        frameRate: 12,
         repeat: -1
     });
     this.donut.play('donut')
