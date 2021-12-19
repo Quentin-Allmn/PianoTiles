@@ -46,6 +46,7 @@ class Tableau1 extends Phaser.Scene {
  * création de la scène
  */
     create() {
+    //positionnement d'Homer
     this.homer = this.add.image(450, 200, 'homer').setOrigin(0, 0);
     this.homer.setVisible(false)
 
