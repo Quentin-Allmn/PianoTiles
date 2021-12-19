@@ -50,75 +50,96 @@ class Tableau1 extends Phaser.Scene {
     this.homer = this.add.image(450, 200, 'homer').setOrigin(0, 0);
     this.homer.setVisible(false)
 
+    //positionnement de Lisa
     this.lisa = this.add.image(200,150,'lisa').setOrigin(0,0);
     this.lisa.setVisible(false)
     this.lisa.scale=0.5
 
+    //positionnement de Bart
     this.bart = this.add.image(725,250,'bart').setOrigin(0,0);
     this.bart.setVisible(false)
     this.bart.scale=0.5
 
+    //positionnement de Moe
     this.moe= this.add.image(600,150,'moe').setOrigin(0,0);
     this.moe.setVisible(false)
     this.moe.scale=0.5
 
+    //positionnement de Skinner
     this.skinner = this.add.image(30,150,'skinner').setOrigin(0,0);
     this.skinner.setVisible(false)
     this.skinner.scale=0.5
 
+    //positionnement de Quimby
     this.quimby = this.add.image(1000,150,'quimby').setOrigin(0,0);
     this.quimby.setVisible(false)
 
+    //positionnement de Gros Tony
     this.grostony = this.add.image(800,150,'gros-tony').setOrigin(0,0);
     this.grostony.setVisible(false)
 
+    //positionnement de Luigi
     this.luigi = this.add.image(500,20,'luigi-risotto').setOrigin(0,0);
     this.luigi.setVisible(false)
     this.luigi.scale=0.5
 
+    //positionnement de Lenny et Carl
     this.lenny = this.add.image(300,10,'lenny-carl').setOrigin(0,0);
     this.lenny.setVisible(false)
     this.lenny.scale=0.25
 
+    //positionnement de Pathy et Selma
     this.pathy = this.add.image(800,10,'pathy-selma').setOrigin(0,0);
     this.pathy.setVisible(false)
     this.pathy.scale=0.25
 
+    //positionnement de Krusty
     this.krusty = this.add.image(800,100,'krusty').setOrigin(0,0);
     this.krusty.setVisible(false)
 
+    //positionnement de Barney
     this.barney = this.add.image(400,300,'barney').setOrigin(0,0);
     this.barney.setVisible(false)
 
+    //positionnement de Mr Burns et de Smithers
     this.burns = this.add.image(870,400,'burns').setOrigin(0,0);
     this.burns.setVisible(false)
 
+    //positionnement de Lovejoy
     this.lovejoy = this.add.image(840,500,'lovejoy').setOrigin(0,0);
     this.lovejoy.setVisible(false)
 
+    //positionnement du Chef Wiggum
     this.wiggum = this.add.image(850,200,'wiggum').setOrigin(0,0);
     this.wiggum.setVisible(false)
 
+    //positionnement de Nelson
     this.nelson = this.add.image(850,200,'nelson').setOrigin(0,0);
     this.nelson.setVisible(false)
 
+    //positionnement d'Edna
     this.edna = this.add.image(850,200,'edna').setOrigin(0,0);
     this.edna.setVisible(false)
 
+    //positionnement du Dr Hibbert
     this.hibbert = this.add.image(850,200,'dr-hibbert').setOrigin(0,0);
     this.hibbert.setVisible(false)
 
+    //positionnement de Martin
     this.martin = this.add.image(850,200,'martin').setOrigin(0,0);
     this.martin.setVisible(false)
 
+    //positionnement de Marge et Maggie
     this.marge = this.add.image(50,100,'marge').setOrigin(0,0);
     this.marge.setVisible(false)
     this.marge.scale=0.5
 
+    //positionnement de Ned
     this.ned = this.add.image(50,10,'ned').setOrigin(0,0);
     this.ned.setVisible(false)
     this.ned.scale=0.5
 
+    //Animation du Donut
     this.donut = this.add.sprite(0, 350, 'donut').setOrigin(0,0);
     console.log(frames)
     this.anims.create({
@@ -129,6 +150,7 @@ class Tableau1 extends Phaser.Scene {
     });
     this.donut.play('donut')
 
+    //Tweens du Donut
     this.tweens.add({
         targets: this.donut,
         x: 900,
@@ -142,6 +164,7 @@ class Tableau1 extends Phaser.Scene {
     this.donut.setVisible(false)
 
 
+    //Animation de la Duff
     this.duff = this.add.sprite(0, 10, 'duff').setOrigin(0,0);
     console.log(frames)
     this.anims.create({
@@ -151,6 +174,8 @@ class Tableau1 extends Phaser.Scene {
         repeat: -1
     });
     this.duff.play('duff')
+
+    //Tweens de la Duff
     this.tweens.add({
         targets: this.duff,
         x: 900,
