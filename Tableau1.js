@@ -85,9 +85,9 @@ class Tableau1 extends Phaser.Scene {
     this.luigi.scale=0.5
 
     //positionnement de Lenny et Carl
-    this.lenny = this.add.image(300,10,'lenny-carl').setOrigin(0,0);
+    this.lenny = this.add.image(700,20,'lenny-carl').setOrigin(0,0);
     this.lenny.setVisible(false)
-    this.lenny.scale=0.25
+    this.lenny.scale=0.5
 
     //positionnement de Pathy et Selma
     this.pathy = this.add.image(175,300,'pathy-selma').setOrigin(0,0);
