@@ -48,16 +48,16 @@ class Tableau1 extends Phaser.Scene {
  */
     create() {
     //positionnement d'Homer
-    this.homer = this.add.image(450, 200, 'homer').setOrigin(0, 0);
+    this.homer = this.add.image(450, 220, 'homer').setOrigin(0, 0);
     this.homer.setVisible(false)
 
     //positionnement de Lisa
-    this.lisa = this.add.image(200,150,'lisa').setOrigin(0,0);
+    this.lisa = this.add.image(350,400,'lisa').setOrigin(0,0);
     this.lisa.setVisible(false)
     this.lisa.scale=0.5
 
     //positionnement de Bart
-    this.bart = this.add.image(725,250,'bart').setOrigin(0,0);
+    this.bart = this.add.image(750,450,'bart').setOrigin(0,0);
     this.bart.setVisible(false)
     this.bart.scale=0.5
 
@@ -120,7 +120,7 @@ class Tableau1 extends Phaser.Scene {
     this.wiggum.scale=0.5
 
     //positionnement de Nelson
-    this.nelson = this.add.image(375,650,'nelson').setOrigin(0,0);
+    this.nelson = this.add.image(300,650,'nelson').setOrigin(0,0);
     this.nelson.setVisible(false)
     this.nelson.scale=0.25
 
@@ -129,8 +129,9 @@ class Tableau1 extends Phaser.Scene {
     this.edna.setVisible(false)
 
     //positionnement du Dr Hibbert
-    this.hibbert = this.add.image(850,200,'dr-hibbert').setOrigin(0,0);
+    this.hibbert = this.add.image(800,250,'dr-hibbert').setOrigin(0,0);
     this.hibbert.setVisible(false)
+    this.hibbert.scale=0.5
 
     //positionnement de Martin
     this.martin = this.add.image(1200,220,'martin').setOrigin(0,0);
@@ -138,7 +139,7 @@ class Tableau1 extends Phaser.Scene {
     this.martin.scale=0.25
 
     //positionnement de Marge et Maggie
-    this.marge = this.add.image(50,100,'marge').setOrigin(0,0);
+    this.marge = this.add.image(500,200,'marge').setOrigin(0,0);
     this.marge.setVisible(false)
     this.marge.scale=0.5
 
@@ -183,7 +184,7 @@ class Tableau1 extends Phaser.Scene {
     //Tweens du Donut
     this.tweens.add({
         targets: this.donut,
-        x: 900,
+        x: 1400,
         duration: 3000,
         ease: 'Linear',
         yoyo: true,
