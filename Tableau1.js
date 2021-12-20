@@ -162,10 +162,10 @@ class Tableau1 extends Phaser.Scene {
     this.bd.flipX=true
 
     //positionnement de l'église
-    this.eglise = this.add.image(1100,400,'eglise').setOrigin(0,0);
-    this.bd.setVisible(false)
-    this.bd.scale=0.5
-    this.bd.flipX=true
+    this.eglise = this.add.image(1100,550,'eglise').setOrigin(0,0);
+    this.eglise.setVisible(false)
+    this.eglise.scale=0.35
+    this.eglise.flipX=true
 
     //Animation du Donut
     this.donut = this.add.sprite(0, 500, 'donut').setOrigin(0,0);
@@ -190,32 +190,6 @@ class Tableau1 extends Phaser.Scene {
     });
     this.donut.scale=0.2
     this.donut.setVisible(false)
-
-
-    //Animation de la Duff
-    this.duff = this.add.sprite(0, 10, 'duff').setOrigin(0,0);
-    console.log(frames)
-    this.anims.create({
-        key: 'duff',
-        frames: this.getFrames("duff",4),
-        frameRate: 16,
-        repeat: -1
-    });
-    this.duff.play('duff')
-
-    //Tweens de la Duff
-    this.tweens.add({
-        targets: this.duff,
-        x: 900,
-        duration: 3000,
-        ease: 'Linear',
-        yoyo: true,
-        flipX: true,
-        repeat: -1,
-    });
-    this.duff.scale=0.2
-    this.duff.setVisible(false)
-
 
     this.initKeyboard();
 
@@ -438,6 +412,15 @@ class Tableau1 extends Phaser.Scene {
                     }
                     else {
                         me.bd.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis E pour l'église
+                case Phaser.Input.Keyboard.KeyCodes.E:
+                    if (me.eglise.visible === true) {
+                        me.eglise.setVisible(false)
+                    }
+                    else {
+                        me.eglise.setVisible(true)
                     }
                     break;
             }
