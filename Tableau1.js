@@ -140,6 +140,11 @@ class Tableau1 extends Phaser.Scene {
     this.ned.setVisible(false)
     this.ned.scale=0.5
 
+    //positionnement de la Taverne de Moe
+    this.taverne = this.add.image(50,10,'taverne').setOrigin(0,0);
+    this.taverne.setVisible(false)
+    this.taverne.scale=0.5
+
     //Animation du Donut
     this.donut = this.add.sprite(0, 500, 'donut').setOrigin(0,0);
     console.log(frames)
@@ -384,6 +389,15 @@ class Tableau1 extends Phaser.Scene {
                     }
                     else {
                         me.duff.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis A pour la Taverne de Moe
+                case Phaser.Input.Keyboard.KeyCodes.A:
+                    if (me.taverne.visible === true) {
+                        me.taverne.setVisible(false)
+                    }
+                    else {
+                        me.taverne.setVisible(true)
                     }
                     break;
             }
