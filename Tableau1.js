@@ -76,8 +76,9 @@ class Tableau1 extends Phaser.Scene {
     this.quimby.setVisible(false)
 
     //positionnement de Gros Tony
-    this.grostony = this.add.image(800,150,'gros-tony').setOrigin(0,0);
+    this.grostony = this.add.image(900,20,'gros-tony').setOrigin(0,0);
     this.grostony.setVisible(false)
+    this.grostony.scale=0.5
 
     //positionnement de Luigi
     this.luigi = this.add.image(500,20,'luigi-risotto').setOrigin(0,0);
@@ -104,16 +105,18 @@ class Tableau1 extends Phaser.Scene {
     this.barney.scale=0.5
 
     //positionnement de Mr Burns et de Smithers
-    this.burns = this.add.image(870,400,'burns').setOrigin(0,0);
+    this.burns = this.add.image(1100,350,'burns').setOrigin(0,0);
     this.burns.setVisible(false)
+    this.burns.scale=0.3
 
     //positionnement de Lovejoy
     this.lovejoy = this.add.image(840,500,'lovejoy').setOrigin(0,0);
     this.lovejoy.setVisible(false)
 
     //positionnement du Chef Wiggum
-    this.wiggum = this.add.image(850,200,'wiggum').setOrigin(0,0);
+    this.wiggum = this.add.image(1000,200,'wiggum').setOrigin(0,0);
     this.wiggum.setVisible(false)
+    this.wiggum.scale=0.5
 
     //positionnement de Nelson
     this.nelson = this.add.image(850,200,'nelson').setOrigin(0,0);
@@ -128,8 +131,9 @@ class Tableau1 extends Phaser.Scene {
     this.hibbert.setVisible(false)
 
     //positionnement de Martin
-    this.martin = this.add.image(850,200,'martin').setOrigin(0,0);
+    this.martin = this.add.image(1200,220,'martin').setOrigin(0,0);
     this.martin.setVisible(false)
+    this.martin.scale=0.25
 
     //positionnement de Marge et Maggie
     this.marge = this.add.image(50,100,'marge').setOrigin(0,0);
@@ -150,6 +154,12 @@ class Tableau1 extends Phaser.Scene {
     this.taverne = this.add.image(50,10,'taverne').setOrigin(0,0);
     this.taverne.setVisible(false)
     this.taverne.scale=0.5
+
+    //positionnement du Magasin de BD
+    this.bd = this.add.image(1100,20,'bd').setOrigin(0,0);
+    this.bd.setVisible(false)
+    this.bd.scale=0.5
+    this.bd.flipX=true
 
     //Animation du Donut
     this.donut = this.add.sprite(0, 500, 'donut').setOrigin(0,0);
@@ -406,13 +416,22 @@ class Tableau1 extends Phaser.Scene {
                         me.taverne.setVisible(true)
                     }
                     break;
-                // initialisation de la touche en appuis T pour la Taverne de Moe
+                // initialisation de la touche en appuis T pour Duffman
                 case Phaser.Input.Keyboard.KeyCodes.T:
                     if (me.duffman.visible === true) {
                         me.duffman.setVisible(false)
                     }
                     else {
                         me.duffman.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis Z pour le magasin de bd
+                case Phaser.Input.Keyboard.KeyCodes.Z:
+                    if (me.bd.visible === true) {
+                        me.bd.setVisible(false)
+                    }
+                    else {
+                        me.bd.setVisible(true)
                     }
                     break;
             }
