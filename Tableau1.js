@@ -62,12 +62,12 @@ class Tableau1 extends Phaser.Scene {
     this.bart.scale=0.5
 
     //positionnement de Moe
-    this.moe= this.add.image(600,150,'moe').setOrigin(0,0);
+    this.moe= this.add.image(350,150,'moe').setOrigin(0,0);
     this.moe.setVisible(false)
     this.moe.scale=0.5
 
     //positionnement de Skinner
-    this.skinner = this.add.image(30,150,'skinner').setOrigin(0,0);
+    this.skinner = this.add.image(30,450,'skinner').setOrigin(0,0);
     this.skinner.setVisible(false)
     this.skinner.scale=0.5
 
@@ -90,7 +90,7 @@ class Tableau1 extends Phaser.Scene {
     this.lenny.scale=0.25
 
     //positionnement de Pathy et Selma
-    this.pathy = this.add.image(800,10,'pathy-selma').setOrigin(0,0);
+    this.pathy = this.add.image(175,300,'pathy-selma').setOrigin(0,0);
     this.pathy.setVisible(false)
     this.pathy.scale=0.25
 
@@ -99,8 +99,9 @@ class Tableau1 extends Phaser.Scene {
     this.krusty.setVisible(false)
 
     //positionnement de Barney
-    this.barney = this.add.image(400,300,'barney').setOrigin(0,0);
+    this.barney = this.add.image(350,10,'barney').setOrigin(0,0);
     this.barney.setVisible(false)
+    this.barney.scale=0.5
 
     //positionnement de Mr Burns et de Smithers
     this.burns = this.add.image(870,400,'burns').setOrigin(0,0);
@@ -119,7 +120,7 @@ class Tableau1 extends Phaser.Scene {
     this.nelson.setVisible(false)
 
     //positionnement d'Edna
-    this.edna = this.add.image(850,200,'edna').setOrigin(0,0);
+    this.edna = this.add.image(150,450,'edna').setOrigin(0,0);
     this.edna.setVisible(false)
 
     //positionnement du Dr Hibbert
@@ -139,6 +140,11 @@ class Tableau1 extends Phaser.Scene {
     this.ned = this.add.image(50,10,'ned').setOrigin(0,0);
     this.ned.setVisible(false)
     this.ned.scale=0.5
+
+    //positionnement de Duffman
+    this.duffman = this.add.image(50,200,'duffman').setOrigin(0,0);
+    this.duffman.setVisible(false)
+    this.duffman.scale=0.5
 
     //positionnement de la Taverne de Moe
     this.taverne = this.add.image(50,10,'taverne').setOrigin(0,0);
@@ -398,6 +404,15 @@ class Tableau1 extends Phaser.Scene {
                     }
                     else {
                         me.taverne.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis T pour la Taverne de Moe
+                case Phaser.Input.Keyboard.KeyCodes.T:
+                    if (me.duffman.visible === true) {
+                        me.duffman.setVisible(false)
+                    }
+                    else {
+                        me.duffman.setVisible(true)
                     }
                     break;
             }
