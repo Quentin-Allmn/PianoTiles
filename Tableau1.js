@@ -161,6 +161,12 @@ class Tableau1 extends Phaser.Scene {
     this.bd.scale=0.5
     this.bd.flipX=true
 
+    //positionnement de l'église
+    this.eglise = this.add.image(1100,400,'eglise').setOrigin(0,0);
+    this.bd.setVisible(false)
+    this.bd.scale=0.5
+    this.bd.flipX=true
+
     //Animation du Donut
     this.donut = this.add.sprite(0, 500, 'donut').setOrigin(0,0);
     console.log(frames)
