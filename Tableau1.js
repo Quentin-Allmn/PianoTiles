@@ -72,7 +72,7 @@ class Tableau1 extends Phaser.Scene {
     this.skinner.scale=0.5
 
     //positionnement de Quimby
-    this.quimby = this.add.image(1000,150,'quimby').setOrigin(0,0);
+    this.quimby = this.add.image(650,650,'quimby').setOrigin(0,0);
     this.quimby.setVisible(false)
 
     //positionnement de Gros Tony
@@ -96,8 +96,9 @@ class Tableau1 extends Phaser.Scene {
     this.pathy.scale=0.25
 
     //positionnement de Krusty
-    this.krusty = this.add.image(800,100,'krusty').setOrigin(0,0);
+    this.krusty = this.add.image(500,650,'krusty').setOrigin(0,0);
     this.krusty.setVisible(false)
+    this.krusty.scale=0.5
 
     //positionnement de Barney
     this.barney = this.add.image(350,10,'barney').setOrigin(0,0);
@@ -119,8 +120,9 @@ class Tableau1 extends Phaser.Scene {
     this.wiggum.scale=0.5
 
     //positionnement de Nelson
-    this.nelson = this.add.image(850,200,'nelson').setOrigin(0,0);
+    this.nelson = this.add.image(375,650,'nelson').setOrigin(0,0);
     this.nelson.setVisible(false)
+    this.nelson.scale=0.25
 
     //positionnement d'Edna
     this.edna = this.add.image(150,450,'edna').setOrigin(0,0);
@@ -141,7 +143,7 @@ class Tableau1 extends Phaser.Scene {
     this.marge.scale=0.5
 
     //positionnement de Ned
-    this.ned = this.add.image(50,10,'ned').setOrigin(0,0);
+    this.ned = this.add.image(1000,450,'ned').setOrigin(0,0);
     this.ned.setVisible(false)
     this.ned.scale=0.5
 
@@ -421,6 +423,15 @@ class Tableau1 extends Phaser.Scene {
                     }
                     else {
                         me.eglise.setVisible(true)
+                    }
+                    break;
+                // initialisation de la touche en appuis R pour Ned
+                case Phaser.Input.Keyboard.KeyCodes.R:
+                    if (me.ned.visible === true) {
+                        me.ned.setVisible(false)
+                    }
+                    else {
+                        me.ned.setVisible(true)
                     }
                     break;
             }
